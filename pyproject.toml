@@ -1,3 +1,29 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "evan-cc"
+description = "Evan's Cookiecutter"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [{ name = "Evan Sizemore", email = "evan@wool.homes" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Django",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+]
+dynamic = ["version", "dependencies"]
+
+
+# ==== Dependencies ====
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+version = { attr = "evan_cc.__version__" }
+
+
 # ==== pytest ====
 [tool.pytest.ini_options]
 addopts = "-v --tb=short"

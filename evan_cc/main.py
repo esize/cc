@@ -14,7 +14,7 @@ def main():
         output_dir = os.getcwd()
 
     # Run cookiecutter
-    cookiecutter(template_dir, output_dir=output_dir, overwrite_if_exists=True)
+    cookiecutter(template_dir + "/", output_dir=output_dir, overwrite_if_exists=True)
 
     print(f"Django project created in {output_dir}")
 
