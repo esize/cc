@@ -17,6 +17,8 @@ classifiers = [
 ]
 dynamic = ["version", "dependencies"]
 
+[project.scripts]
+evan-cc = "evan_cc.cli:main"
 
 # ==== Dependencies ====
 [tool.setuptools.dynamic]
